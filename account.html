@@ -1,0 +1,170 @@
+<html></html>
+<head>
+    <title>Hogwarts - Serpeverde</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+
+function show_hide_function() {
+  var x = document.getElementById("psw");
+
+  if (x.type === "password") {
+    x.type = "text";
+  
+ } else {
+    x.type = "password";
+    }
+        
+}
+
+function show_hide_function_login() {
+  var x = document.getElementById("psw_login");
+
+  if (x.type === "password") {
+    x.type = "text";
+  
+ } else {
+    x.type = "password";
+    }
+        
+}
+
+</script>
+
+</head>
+<body>
+<center>
+
+
+<div>
+<table>
+<tr>
+<td><img src="img/serpeverde.png" ></td>
+</tr>
+</table>
+</div>
+
+<div id="nav">
+    	
+    <center>
+    <a href="index.html">Home</a>
+    <a href="chi_siamo.html">Chi Siamo</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="account.html"><u>Account</u></a>
+    </center>
+    
+</div>
+
+<div class="container">
+<fieldset>
+    <legend><h1 align="center" class="spazio_top">REGISTRATI SUBITO ALLA CASATA SERPEVERDE</h1></legend>
+    <form action="registrazione.html" method="post">
+        <table>
+        
+        <tr>
+        <td colspan="2">Nome: <input class="text" type="text" size="10" maxlength="30" required></td>
+        <td colspan="2">Cognome: <input class="text" type="text" size="10" maxlength="30" required></td>
+        </tr>
+        
+        <tr>
+        <td colspan="4" class="spazio_top">Sesso: </td>
+        </tr>
+    
+        <tr>
+        <td colspan="4" class="spazio_bottom">
+        <input type="radio" name="sesso" value="mago">
+        <label for="mago">Mago</label>
+        <input type="radio" name="sesso" value="maga">
+        <label for="maga">Maga</label>
+        <input type="radio" id="3_ore" name="sesso" value="altro">
+        <label for="altro" c>Altro</label>
+        </td>
+        </tr>
+        
+        
+    
+        <tr>
+        <td class="spazio_bottom_top" colspan="4">Codice Fiscale: <input class="text" type="text" maxlength="16" required></td>
+        </tr>
+    
+        <tr>
+        <td class="spazio_left" colspan="2">Data di nascita: </td>
+        <td  class="spazio_right" colspan="2"><input type="date" class="text" required></td>
+        </tr>
+        
+        <tr>
+        <td class="spazio_top" colspan="4">Città: <input class="text" type="text" maxlength="30" required></td>
+        </tr>
+        
+        <tr>
+        <td class="spazio_top" colspan="4">Altro</td>
+        </tr>
+    
+        <tr>
+        <td colspan="4"><textarea rows="10" cols="50" maxlength="300" class="text"></textarea></td> 
+        </tr>
+       
+        <tr>
+        <td class="spazio_top" colspan="4">Email: <input class="email" type="text" maxlength="50" required></td>
+        </tr>
+
+        <tr>
+        <td class="spazio_top" colspan="3">password: <input class="text" type="password" name="password" id="psw" minlength="8" required></td>
+        <td class="spazio_top" colspan="">
+        <input type="button" class="bottone" value="MOSTRA" name="bottone_funzione" id="bottone_funzione" onclick="show_hide_function()">
+        </td>
+        </tr>
+        
+        <tr>
+        <td class="spazio_top" colspan="4">
+        <input type="submit" value="INVIA" class="bottone" id="btn">
+        <input type="reset" value="RESET" class="bottone" id="btn">
+        </td> 
+        </tr>
+        
+    </table>
+
+    </form>
+</fieldset>
+</div>
+
+<br><br><br>
+
+<div class="container">
+<fieldset>
+<legend><h1 align="center">EFFETTUA LOGIN</h1></legend>
+<form action="invio_form.html" method="post">
+    <table>
+    
+    <tr>
+    <td class="spazio_bottom_top" colspan="4">Codice Fiscale: <input class="text" type="text" maxlength="16"></td>
+    </tr>
+
+    <tr>
+    <td class="spazio_top" colspan="2">password: <input class="text" type="password" name="password" id="psw_login" minlength="8" required></td>
+    <td padding-left="5px" class="spazio_top">
+    <input type="button" class="bottone" value="MOSTRA" name="bottone_funzione" id="bottone_funzione" onclick="show_hide_function_login()">
+    </td>
+    </tr>
+      
+    <tr>
+    <td class="spazio_top" colspan="4">
+    <input type="submit" value="INVIA" class="bottone" id="btn">
+    <input type="reset" value="RESET" class="bottone" id="btn">
+    </td> 
+    </tr>
+
+    </table>
+    
+</form>
+</fieldset>
+</div>
+
+</center>
+</body>
+
+<footer>
+Diritti riservati Slythrin©
+</footer>
+</html>

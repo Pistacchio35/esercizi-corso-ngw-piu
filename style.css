@@ -1,0 +1,96 @@
+@media(max-width:768px){
+    
+    .container{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .item{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+body{background: #000;
+    color: #C0C0C0;}
+
+p{font-style: italic;}
+
+.paragrafo{text-align: center; 
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: center;
+    font-size: larger;}
+
+table{color: #C0C0C0;;
+    text-align: center;
+    width: 60%;
+   margin: auto;
+   margin: auto;
+   padding-top: 100px;
+   padding-bottom: 100px;}
+
+td{text-transform: uppercase;}
+
+   fieldset
+   {
+     max-width: 40%;
+     padding:16px;	
+   }
+
+textarea {display: block;
+    margin: auto;}
+
+.bottone{height: 50px;
+        width: 100px;
+        border-radius: 20px;
+        background-color: black;
+        border-color: #C0C0C0;
+        color: #C0C0C0;}
+
+.bottone-2{height: 50px;
+        width: 200px;
+        border-radius: 20px;
+        background-color: black;
+        color: #C0C0C0;}
+
+.bottone:hover{background-color: #1D7452;
+                color: black;}
+
+.bottone-2:hover{background-color: #1D7452;
+            color: black;}
+            
+.text{border-radius: 20px;}
+
+.spazio_top{padding-top: 50px;}
+.spazio_bottom{padding-bottom: 50px;}
+.spazio_left{padding-left: 150;}
+.spazio_right{padding-right: 150;}
+.spazio_bottom_top{padding-bottom: 50px;
+    padding-top: 50px;}
+
+.frase{background-color: #1D7452;
+        margin-left: 150px;
+        margin-right: 150px;
+        border-radius: 30px;}
+
+footer{text-align: center;
+    text-decoration: underline;
+    color: #fff;
+    padding-top: 150px;
+    padding-bottom: 50px;}
+
+.bordo{border: 5px solid #1D7452;}
+
+#nav{width:100%;background:#F0C03A;color:#fff;}
+#nav a{
+       color:#000; 
+       
+       padding:15px 20px;
+       display:inline-block; 
+       text-decoration:none; 
+       text-transform:uppercase;
+       font-family:oswald;
+       font-weight:bold;
+       }
+                        
+#nav a:hover{background:#666;}
