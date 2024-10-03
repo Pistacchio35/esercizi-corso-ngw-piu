@@ -17,14 +17,14 @@ function aggiungiProdotto(lista) {
 
         prodotto = prompt('Si desidera proseguire?')
         
-        if (prodotto == 'ESCI' || prodotto == 'esci' || prodotto == 'NO' || prodotto == 'no') break;
+        if (scelta.toLowerCase() === 'esci' || scelta.toLowerCase() === 'no') break;
     }
 
     //visualizzazione di tutti gli elementi della lista
-    for(let i=0;i<lista.length;i++)
-    {
-    visualizza = visualizza + ' - ' + lista[i]
-    console.log(lista[i]);
+    visualizza = "LISTA DELLA SPESA:";
+    for (let i = 0; i < lista.length; i++) {
+        visualizza += ' - ' + lista[i];
     }
-    alert('LISTA DELLA SPESA' + visualizza)
+
+    alert(visualizza)
 }
