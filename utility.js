@@ -68,8 +68,6 @@ function gestioneListaSpesa(lista, prodotto) {
     }
 
     alert(visualizza)
-
-    return lista
 }
 
 //Funzione che permette di aggiungere un elemento alla lista della spesa
