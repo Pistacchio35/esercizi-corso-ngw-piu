@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+ul {
+    list-style-position: inside;
+    justify-items: center
+}
+
+.box {
+    display: flex;
+}
+
+.box ul {
+    margin: auto;
+    text-align: center;
+}
