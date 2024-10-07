@@ -10,45 +10,63 @@
 
                 <h1> Benvenuto <span id="nome-utente">X</span></h1>
 
-                <input type="text" id="piatto">
+                <input type="text" id="citta">
 
                 <input type="button" id="ricerca" value="CERCA"
-                    onclick="ricerca_piatto()">
+                    onclick="ricerca_meteo()">
 
                 <br><br><br>
 
                 <input type="button" value="TORNA" onclick="torna()">
 
-                <div id="mostra-piatti"></div>
+                <div id="mostra-meteo">
+                    <ul id="elenco-meteo"></ul>
+                    <img src="" id="img">
+                </div>
 
             </center>
         </main>
         <footer>
         </footer>
 
+        <script src="utility.js"></script>
         <script>
             
-            async function ricerca_piatto(){
+            async function ricerca_meteo(){
                 
-                let piatto = document.getElementById('piatto').value
+                let citta = document.getElementById('citta').value
                 
-                let risposta = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s="+piatto);
+                let risposta = await fetch("https://api.weatherapi.com/v1/current.json?key=b316d25e64784174b55131544240710&q="+citta+"&aqi=no");
                 let rispost_json = await risposta.json();
                 console.log(rispost_json);
             
             
-                if (rispost_json.meals && rispost_json.meals.length > 0) {
-                let meal = rispost_json.meals[0];
-                console.log(meal.strMeal);
-                let yt = rispost_json.meals[0];
-                console.log(yt.strYoutube);
-                let descr = rispost_json.meals[0];
-                console.log(descr.strInstructions);
-                } else {
-                console.log("Nessun piatto trovato");
-                }
+            if (rispost_json.location && rispost_json.current) {
+            
+            let nome = rispost_json.location.name;
+            console.log("Nome città:", nome);
 
-                mostra(meal,yt,descr)
+            let paese = rispost_json.location.country;
+            console.log("Paese:", paese);
+
+            let tempo = rispost_json.location.localtime;
+            console.log("Ora locale:", tempo);
+
+            let temp = rispost_json.current.temp_c;
+            console.log("Temperatura (°C):", temp);
+
+            let text = rispost_json.current.condition.text;
+            console.log("Condizione:", text);
+
+            let icon = rispost_json.current.condition.icon;
+            console.log("immagine", icon);
+            
+            mostra(nome,paese,tempo,temp,text,icon)
+            } 
+            else{
+            console.log("Nessuna città trovata");
+            }
+
             }
 
 
