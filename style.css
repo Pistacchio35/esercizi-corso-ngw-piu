@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenitore {
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid #000;
+}

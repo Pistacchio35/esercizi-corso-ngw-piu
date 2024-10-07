@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Ricerca Piatto</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <main>
+            <center>
+
+                <h1> Benvenuto <span id="nome-utente">X</span></h1>
+
+                <input type="text" id="piatto">
+
+                <input type="button" id="ricerca" value="CERCA"
+                    onclick="ricerca_piatto()">
+
+                <br><br><br>
+
+                <input type="button" value="TORNA" onclick="torna()">
+
+                <div id="mostra-piatti"></div>
+
+            </center>
+        </main>
+        <footer>
+        </footer>
+
+        <script>
+            
+            async function ricerca_piatto(){
+                
+                let piatto = document.getElementById('piatto').value
+                
+                let risposta = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s="+piatto);
+                let rispost_json = await risposta.json();
+                console.log(rispost_json);
+            
+            
+                if (rispost_json.meals && rispost_json.meals.length > 0) {
+                let meal = rispost_json.meals[0];
+                console.log(meal.strMeal);
+                let yt = rispost_json.meals[0];
+                console.log(yt.strYoutube);
+                let descr = rispost_json.meals[0];
+                console.log(descr.strInstructions);
+                } else {
+                console.log("Nessun piatto trovato");
+                }
+
+                mostra(meal,yt,descr)
+            }
+
+
+
+            if(localStorage.getItem("utente") == "")
+                        {
+                window.location.href = "index9.html";
+            
+            }
+                
+            let utente = JSON.parse(localStorage.getItem("utente"))
+
+            document.getElementById("nome-utente").innerHTML = utente.username
+            
+            function torna(){
+                window.location.href = "index.html";
+            }
+
+        </script>
+
+    </body>
+</html>

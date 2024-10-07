@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>LOGIN</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>LOGIN</h1>
+            <div class="contenitore">
+            <h2>USERNAME</h2>
+            <input type="text" id="username">
+            <br>
+            <h2>PASSWORD</h2>
+            <input type="password" id="password">
+            <br><br>
+            <input type="button" onclick="accedi_dash()" value="ACCEDI">
+            </div>
+        </main>
+        <script>
+            function accedi_dash(){
+                let input = document.getElementById("username").value
+                let input_pass = document.getElementById("password").value
+
+                const utente = {
+                    username: input,
+                    password: input_pass,
+                }
+            
+            if(input_pass == "" || input == ""){
+                alert('Uno dei campi è vuoto!')
+            }
+            else{
+                localStorage.setItem("utente", JSON.stringify(utente));
+                window.location.href = "protetta.html";
+            }
+            }
+        </script>
+    </body>
+</html>
