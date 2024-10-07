@@ -1,0 +1,134 @@
+<html>
+
+    <head>
+        <title>INSERIMENTO CREDENZIALI</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <main>
+            <center>
+                <div>
+                    <fieldset>
+                        <legend>REGISTRAZIONE UTENTE</legend>
+                        <form id="form-1">
+                            <table>
+                                <tr>
+                                    <td>
+                                        NOME
+                                    </td>
+                                    <td>
+                                        <input type="text" id="nome"
+                                            maxlength="30"
+                                            size="20">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        COGNOME
+                                    </td>
+                                    <td>
+                                        <input type="text" id="cognome"
+                                            maxlength="30" size="20">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        EMAIL
+                                    </td>
+                                    <td>
+                                        <input type="email" id="email"
+                                            maxlength="50" size="20">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        PASSWORD
+                                    </td>
+                                    <td>
+                                        <input type="password" id="password"
+                                            size="20"
+                                            minlength="8">
+                                    </td>
+                                    <td>
+                                        <img alt src="img/hide.png"
+                                            id="image"
+                                            width="60"
+                                            onmouseover="changeImage(1,this)"
+                                            onmouseout="changeImage(2,this)"
+                                            style="vertical-align:middle"
+                                            class="image">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <input type="submit" value="INVIA"
+                                            class="button">
+                                        <input type="reset" value="RESET"
+                                            class="button">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </fieldset>
+                </div>
+
+                <div id="benvenuto" name="benvenuto">
+
+                    <h1 id="scritta_benvenuto"></h1>
+                    <ul id="elenco_credenziali"></ul>
+                </div>
+
+            </center>
+        </main>
+
+        <script src="utility.js"></script>
+        <script>
+
+            let form1 = document.getElementById("form-1")
+            form1.addEventListener("submit", function (){
+            
+            event.preventDefault();
+
+            if(document.getElementById("nome").value == "" || document.getElementById("cognome").value == "" 
+                || document.getElementById("email").value == "" || document.getElementById("password").value == "")
+            {
+                if(document.getElementById("nome").value == ""){
+                alert('Il campo NOME è vuoto')
+                }
+                else if(document.getElementById("cognome").value == ""){
+                alert('Il campo COGNOME è vuoto')
+                }
+                else if(document.getElementById("email").value == ""){
+                alert('Il campo EMAIL è vuoto')
+                }
+                else if(document.getElementById("password").value == ""){
+                    alert('Il campo PASSWORD è vuoto')
+                }
+            }
+            else
+            {
+                let nome = document.getElementById("nome").value
+                let cognome = document.getElementById("cognome").value
+                let email = document.getElementById("email").value
+                let password = document.getElementById("password").value   
+
+                mostra_credenziali(nome,cognome,email,password)
+
+                document.getElementById("nome").value = ""
+                document.getElementById("cognome").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("password").value = ""
+            }
+            })
+
+            </script>
+
+    </body>
+    <footer>
+
+    </footer>
+
+</html>

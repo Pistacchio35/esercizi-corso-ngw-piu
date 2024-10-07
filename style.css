@@ -1,0 +1,99 @@
+body {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 5px red;
+}
+
+.registrazione {
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+table {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+
+}
+
+td {
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+fieldset {
+    text-align: center;
+    font-size: x-large;
+    max-width: 70%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+legend {
+    font-size: 40px;
+}
+
+.inputField {
+    float: left;
+}
+
+.password {
+    text-align: center;
+}
+
+.image {
+    padding-left: 20px;
+}
+
+.button {
+    padding-left: 1cm;
+    padding-right: 1cm;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-shadow: 2px 2px 5px red;
+    background-color: #fff;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+    border-radius: 10px;
+}
+
+input:hover {
+    border-radius: 10px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
