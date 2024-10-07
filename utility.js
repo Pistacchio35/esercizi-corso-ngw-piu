@@ -1,20 +1,23 @@
-function cerca() {
+function mostra(meal,yt,descr) {
 
-    document.getElementById('scritta_benvenuto').innerHTML = ""
-    document.getElementById('elenco_credenziali').innerHTML = ""
+    let vuota = document.getElementById('video').src
+    vuota.src = ""
+    frame.appendChild(vuota)
 
-    let insert_scritta = document.createElement("h1");
-    insert_scritta.innerText = "BENVENUTO UTENTE";
-    document.getElementById('scritta_benvenuto').appendChild(insert_scritta);
+    document.getElementById('elenco-piatti').innerHTML = ""
+    
+    let piatto = [meal, descr]
 
-    let credenziali = [nome, cognome, email, password]
+    let list = document.getElementById("elenco-piatti");
 
-    let list = document.getElementById("elenco_credenziali");
-
-    credenziali.forEach((item) => {
+    piatto.forEach((item) => {
         let li = document.createElement("li");
         li.innerText = item;
         list.appendChild(li);
     });
+
+    let video = document.getElementById('video')
+    video.src = yt
+    frame.appendChild(video)
 
 }

@@ -1,3 +1,9 @@
+<!-- In questo sito web vengono ricercati dei piatti tramite input dell'utente
+ e mostrati sottoforma di elenco, il tutto dopo essere loggato
+
+ATTUALMENTE NON VIENE MOSTRATO IL PIATTO TROVATO SULLA PAGINA MA SULLA CONSOLE
+
+ -->
 <html>
     <head>
         <title>Ricerca Piatto</title>
@@ -8,24 +14,28 @@
         <main>
             <center>
 
-                <h1> Benvenuto <span id="nome-utente">X</span></h1>
+                <h1> Benvenuto <span id="nome-utente" class="nome_utente">X</span></h1>
 
                 <input type="text" id="piatto">
 
                 <input type="button" id="ricerca" value="CERCA"
-                    onclick="ricerca_piatto()">
+                    onclick="ricerca_piatto()" class="button">
 
                 <br><br><br>
 
-                <input type="button" value="TORNA" onclick="torna()">
+                <input type="button" value="TORNA" onclick="torna()" class="button">
 
-                <div id="mostra-piatti"></div>
+                <div id="mostra-piatti">
+                    <ul class="elenco-piatti"></ul>
+                    <iframe width="420" height="315" src="" id="video"></iframe>
+                </div>
 
             </center>
         </main>
         <footer>
         </footer>
 
+        <script src="utility.js"></script>
         <script>
             
             async function ricerca_piatto(){
@@ -36,18 +46,13 @@
                 let rispost_json = await risposta.json();
                 console.log(rispost_json);
             
-            
-                if (rispost_json.meals && rispost_json.meals.length > 0) {
                 let meal = rispost_json.meals[0];
                 console.log(meal.strMeal);
                 let yt = rispost_json.meals[0];
                 console.log(yt.strYoutube);
                 let descr = rispost_json.meals[0];
                 console.log(descr.strInstructions);
-                } else {
-                console.log("Nessun piatto trovato");
-                }
-
+                
                 mostra(meal,yt,descr)
             }
 
