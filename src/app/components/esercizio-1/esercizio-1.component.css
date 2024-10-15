@@ -1,0 +1,19 @@
+.container{}
+
+.person {
+    text-align: center;
+    align-items: justify;
+    padding-top: 100px;
+}
+
+.inserimento, .counter {
+    text-align: center;
+    align-items: justify;
+    padding-top: 100px;}
+
+p {
+    font-size: medium;
+    margin: 16px;
+    padding: 16px;
+    color: blue;
+}

@@ -1,0 +1,19 @@
+<div class="contenitore"> 
+
+<div class="input">
+
+    <p class="numeri">Inserisci il primo numero: </p><input type="number" [(ngModel)]='num1' value=" ">
+    <p class="numeri">Inserisci il secondo numero: </p><input type="number" [(ngModel)]='num2' value=" ">
+
+</div>
+
+<div class="operazioni">
+
+<input type="button" class="button" (click)="onBtnSomma()" value="SOMMA">
+<input type="button" class="button" (click)="onBtnDifferenza()" value="DIFFERENZA">
+<input type="button" class="button" (click)="onBtnMoltiplicazione()" value="MOLTIPLICAZIONE">
+<input type="button" class="button" (click)="onBtnDivisione()" value="DIVISIONE">
+
+</div>
+
+</div>

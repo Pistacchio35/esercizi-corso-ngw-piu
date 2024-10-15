@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div class="img">
+        <!--Property Binding-->
+        <img [src]= 'urlImmagine' alt="Logo di Angular" width="200px">
+    </div>
+
+    <div class="person">
+        <p>NOME: {{nome}}</p>
+        <p>COGNOME: {{cognome}}</p>
+        <p>ETA': {{eta}}</p>
+        <p>HOBBY: {{hobby}}</p>
+    </div>
+
+    <div class="inserimento">
+        <input type="text" [(ngModel)]='nome'>
+        <p>il tuo nome è {{nome}}</p>
+        <input type="button" (click)="saluta()" value="CLICCAMI">
+    </div>
+
+    <div class="counter">
+        <p>Sono il counter {{count}}</p>
+        <input type="button" (click)="onBtnClickAumenta()" value="AUMENTA">
+        <input type="button" (click)="onBtnClickDiminuisci()" value="DIMINUISCI">
+    </div>
+
+</div>
