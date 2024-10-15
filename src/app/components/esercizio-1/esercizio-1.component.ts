@@ -16,6 +16,7 @@ export class Esercizio1Component {
   eta: number = 20
   hobby: string = 'Pugilato'
   count: number = 0
+  isShow: boolean = true
 
   messaggio: string = 'Ciao,benvenuto nel mondo di Angular!'
 

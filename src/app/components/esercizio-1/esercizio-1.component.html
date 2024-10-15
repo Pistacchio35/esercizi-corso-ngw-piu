@@ -2,7 +2,7 @@
 
     <div class="img">
         <!--Property Binding-->
-        <img [src]= 'urlImmagine' alt="Logo di Angular" width="200px">
+        <img [src]='urlImmagine' alt="Logo di Angular" width="200px">
     </div>
 
     <div class="person">
@@ -21,7 +21,14 @@
     <div class="counter">
         <p>Sono il counter {{count}}</p>
         <input type="button" (click)="onBtnClickAumenta()" value="AUMENTA">
-        <input type="button" (click)="onBtnClickDiminuisci()" value="DIMINUISCI">
+        <input type="button" (click)="onBtnClickDiminuisci()"
+            value="DIMINUISCI">
+    </div>
+
+    <!--se isShow è true viene mostrato il messaggio, altrimenti
+    viene nascosto-->
+    <div class="ngif" *ngif="isShow">
+        <p>questo contenuto verra visualizzato se la condizione è true</p>
     </div>
 
 </div>
