@@ -1,0 +1,30 @@
+<div>
+    <h2>Profilo Utente</h2>
+    <label for="ruolo">Seleziona Ruolo</label>
+    <select id="ruolo" [(ngModel)]="ruolo">
+        <option value="Admin">Admin</option>
+        <option value="Utente">Utente</option>
+        <option value="Ospite">Ospite</option>
+    </select>
+    <div [ngSwitch]="ruolo">
+        <div *ngSwitchCase="'Admin'">
+            <h3 [ngStyle]="{'background-color': ruolo ? 'blue'  : 'pink'}">Ruolo: Admin</h3>
+            <p>Visualizzare i dati personali</p>
+            <p>Modificare le impostazioni del sito</p>
+            <p>Gestire gli utenti</p>
+        </div>
+        <div *ngSwitchCase="'Utente'">
+            <h3 [ngStyle]="{'background-color': !ruolo ? 'green'  : 'pink'}">Ruolo: Utente</h3>
+            <p>Visualizzare i dati personali</p>
+            <p>Modificare le impostazioni personali</p>
+        </div>
+        <div *ngSwitchCase="'Ospite'">
+            <h3>Ruolo: Ospite</h3>
+            <p>Visualizzare i dati personali</p>
+        </div>
+        <div *ngSwitchDefault>
+            <h3>Nessun Ruolo Selezionato</h3>
+            <p>Seleziona un ruolo per visualizzare le azioni che puoi compiere</p>
+        </div>
+    </div>
+</div>

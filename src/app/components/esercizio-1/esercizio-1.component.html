@@ -1,15 +1,15 @@
 <div class="container">
 
     <div class="img">
-        <!--Property Binding-->
+
         <img [src]='urlImmagine' alt="Logo di Angular" width="200px">
     </div>
 
     <div class="person">
-        <p>NOME: {{nome}}</p>
-        <p>COGNOME: {{cognome}}</p>
-        <p>ETA': {{eta}}</p>
-        <p>HOBBY: {{hobby}}</p>
+        <p class="parag">NOME: {{nome}}</p>
+        <p class="parag">COGNOME: {{cognome}}</p>
+        <p class="parag">ETA': {{eta}}</p>
+        <p class="parag">HOBBY: {{hobby}}</p>
     </div>
 
     <div class="inserimento">
@@ -25,10 +25,67 @@
             value="DIMINUISCI">
     </div>
 
-    <!--se isShow è true viene mostrato il messaggio, altrimenti
-    viene nascosto-->
-    <div class="ngif" *ngif="isShow">
-        <p>questo contenuto verra visualizzato se la condizione è true</p>
+    se isShow è true viene mostrato il messaggio, altrimenti viene nascosto
+    <div *ngIf="isShow;  else isFalse">
+        questo contenuto viene mostrato solo se true
+    </div>
+
+    <ng-template #isFalse>
+        questo contenuto verrà mostrato se la condition è false
+    </ng-template>
+
+    <button (click)="this.isShow = !this.isShow">cliccami</button>
+
+    <div class="ngFor">
+        <!--iterare un array con ngFor-->
+        <ul class="togli-punti">
+            <li *ngFor="let frutti of fruits; let i= index">
+                {{i + 1}}, {{frutti}}
+            </li>
+        </ul>
+
+        <!--iterare un oggetto con ngFor-->
+        <ul class="togli-punti">
+            <li *ngFor="let item of citta">
+                {{ item.nome }}
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="ngFor-2" *ngFor="let item of citta">
+        <p>{{ item.nome }} - {{ item.cap }}</p>
+    </div>
+
+    <div class="ngFor-3">
+        <ul class="togli-punti">
+            <li *ngFor="let persona of persone let i= index">
+                {{ i + 1 }} {{persona.nome}} - {{persona.eta}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="select-ngfor">
+        <select [(ngModel)]="nomePaese">
+            <option *ngFor="let nazione of paesi">{{nazione.nome}}</option>
+        </select>
+
+        <div class="mosta">
+            <h2>Hai selezionato => {{nomePaese}}</h2>
+        </div>
+    </div>
+
+    <div class="tabella-ngfor">
+        <table>
+            <thead>
+                <th>Prodotto</th>
+                <th>Prezzo</th>
+            </thead>
+            <tbody *ngFor="let itemshop of prodotti">
+                <td>{{itemshop.prodotto}}</td>
+                <td>{{itemshop.prezzo}}</td>
+            </tbody>
+        </table>
     </div>
 
 </div>

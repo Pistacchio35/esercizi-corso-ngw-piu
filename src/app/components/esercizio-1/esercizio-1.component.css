@@ -1,19 +1,47 @@
-.container{}
-
 .person {
     text-align: center;
     align-items: justify;
     padding-top: 100px;
 }
 
-.inserimento, .counter {
+.inserimento,
+.counter,
+.ngFor,
+.ngFor-2,
+.ngFor-3,
+.select-ngfor,
+.tabella-ngfor {
     text-align: center;
-    align-items: justify;
-    padding-top: 100px;}
+    align-items: center;
+    padding-top: 100px;
+}
 
-p {
+.parag {
     font-size: medium;
     margin: 16px;
     padding: 16px;
     color: blue;
 }
+
+.togli-punti {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+}
+
+table {
+    width: 25rem;
+    height: 25rem;
+    border: 2px solid #0066cc;
+    color: white;
+    text-align: center;
+}
+
+thead {
+    background-color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+tbody{background-color: #0066cc;}
