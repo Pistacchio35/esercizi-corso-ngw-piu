@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-contatore',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './contatore.component.css'
 })
 export class ContatoreComponent {
+
+  @Input() datoDalParent: string = '';
 
   counter: number = 0
 

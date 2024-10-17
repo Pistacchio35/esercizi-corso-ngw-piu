@@ -6,11 +6,12 @@ import { ContatoreComponent } from "./components/contatore/contatore.component";
 import { CalcolatriceComponent } from "./components/calcolatrice/calcolatrice.component";
 import { MostraBottoneComponent } from "./components/mostra-bottone/mostra-bottone.component";
 import { GestioneRuoloComponent } from "./components/gestione-ruolo/gestione-ruolo.component";
+import { HomepageComponent } from "./pages/homepage/homepage.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HelloWorldComponent, Esercizio1Component, ContatoreComponent, CalcolatriceComponent, MostraBottoneComponent, GestioneRuoloComponent],
+  imports: [RouterOutlet, HelloWorldComponent, Esercizio1Component, ContatoreComponent, CalcolatriceComponent, MostraBottoneComponent, GestioneRuoloComponent, HomepageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
