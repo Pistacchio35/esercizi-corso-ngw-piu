@@ -1,0 +1,39 @@
+body {
+    align-items: center;
+}
+
+.contenitore {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.paragrafo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.scritta {
+    text-align: center;
+}
+
+table {
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+    justify-items: center
+}
+
+h1{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+p{
+    border: 1px solid black;
+    padding: 1,5cm;
+}
