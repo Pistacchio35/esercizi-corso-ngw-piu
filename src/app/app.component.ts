@@ -7,11 +7,12 @@ import { CalcolatriceComponent } from "./components/calcolatrice/calcolatrice.co
 import { MostraBottoneComponent } from "./components/mostra-bottone/mostra-bottone.component";
 import { GestioneRuoloComponent } from "./components/gestione-ruolo/gestione-ruolo.component";
 import { HomepageComponent } from "./pages/homepage/homepage.component";
+import { UserComponent } from "./components/user/user.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HelloWorldComponent, Esercizio1Component, ContatoreComponent, CalcolatriceComponent, MostraBottoneComponent, GestioneRuoloComponent, HomepageComponent],
+  imports: [RouterOutlet, HelloWorldComponent, Esercizio1Component, ContatoreComponent, CalcolatriceComponent, MostraBottoneComponent, GestioneRuoloComponent, HomepageComponent,UserComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
